@@ -1,0 +1,110 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+    @media (max-width: $mobile-width) {
+        flex-direction: column;
+    }
+
+    &__logo {
+        font-weight: bold;
+        color: #3c493f;
+        text-decoration: none;
+        margin: 0;
+        width: 200px;
+        align-items: baseline;
+
+        @media (max-width: $mobile-width) {
+            margin: 20px auto 0 auto;
+        }
+    }
+
+    &__img-logo {
+        height: auto;
+        width: 200px;
+        margin-top: 5px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        list-style: none;
+        padding: 0;
+        margin: 25px 0;
+
+        @media (max-width: $mobile-width) {
+            flex-direction: column;
+        }
+    }
+        
+    &__link {
+        text-decoration: none;
+        margin-right: 40px;
+        color: $dark-green;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 400;
+
+        @media (max-width: $mobile-width) {
+            margin-right: 0;
+        }
+
+        &:hover {
+            text-decoration: underline;
+
+            @media (max-width: $mobile-width) {
+                text-decoration: none;
+                opacity: 0.75;
+            }
+        }
+
+        &:active {
+            opacity: 0.5;
+        }
+
+        &--active {
+            position: relative;
+
+            @media (max-width: $mobile-width) {
+                font-weight: 700;
+            }
+
+            &:hover {
+                text-decoration: none;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background-color: $dark-green;
+                left: 0;
+                bottom: 0;
+
+                @media (max-width: $mobile-width) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__item {
+        padding: 0;
+        border: none;
+
+        @media (max-width: $mobile-width) {
+            padding: 10px 0;
+            border-bottom: 1px solid $dark-green;
+            width: 767px;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.partners {
+    &__list {
+        padding: 0;
+        margin: 0 auto 20px auto;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        @media (max-width: $mobile-width) {
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        min-height: 300px;
+    }
+
+    &__img {
+        text-align: center;
+        padding: 0;
+        margin: 0 auto;
+        object-fit: cover;
+    }
+}

@@ -1,0 +1,35 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__info {
+        display: grid;
+        grid-template-columns: 570px 570px;
+        column-gap: 30px;
+        align-items: center;
+        margin-bottom: 40px;
+
+        @media (max-width: $mobile-width) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__text {
+        @media (max-width: $mobile-width) {
+            width: 320px;
+            text-align: center;
+        }
+    }
+
+    & img {
+        width: 450px;
+
+        @media (max-width: $mobile-width) {
+            width: 320px;
+        }
+    }
+}

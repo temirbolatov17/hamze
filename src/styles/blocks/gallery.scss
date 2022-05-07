@@ -1,0 +1,32 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+
+    @media (max-width: $mobile-width) {
+        flex-direction: column;
+    }
+
+    &__item {
+        margin: 5px 40px;
+        box-shadow: 0 2px 5px 0 rgb(0, 0, 0, 16%), 0 2px 10px 0 rgb(0, 0, 0, 12%);
+
+        @media (max-width: $mobile-width) {
+            margin: 20px auto;
+            width: 320px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        & img {
+            object-fit: cover;
+        }
+    }
+
+    &__caption {
+        text-align: center;
+        margin: 5px 0;
+        font-weight: 700;
+    }
+}

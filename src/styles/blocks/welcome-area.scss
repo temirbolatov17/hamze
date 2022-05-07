@@ -1,0 +1,65 @@
+.welcome-area {
+    height: 600px;
+    background-color: #BFC0C0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-position: center center;
+
+    
+
+    &--directions {
+        background-image: url(/src/images/main-slider1.webp);
+        
+        @media (max-width: 1219px) {
+            width: 1260px;
+        }
+    }
+
+    &--vacancy {
+        background-image: url(/src/images/main-slider1.webp);
+        
+        @media (max-width: 1219px) {
+            width: 1260px;
+        }
+    }
+
+    @media (max-width: $mobile-width) {
+        background-size: cover;
+        width: 100%;
+        height: 500px;
+        background-image: url(/src/images/main-slider-mobile.jpg);
+        overflow: hidden;
+
+        &--directions {
+            background-image: url(/src/images/main-slider1.webp);
+        }
+
+        &--vacancy {
+            background-image: url(/src/images/main-slider1.webp);
+        }
+    }
+
+    &__title {
+        color: $white;
+        font-weight: 400;
+        text-align: center;
+
+        @media (max-width: $mobile-width) {
+            margin-top: 40px;
+            font-size: 20px;
+            overflow: hidden;
+        }
+    }
+
+    & img {
+        object-fit: contain;
+
+        @media (max-width: $mobile-width) {
+            display: none;
+        }
+    }
+}

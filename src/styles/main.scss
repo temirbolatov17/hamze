@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+@import "./global/variables.scss";
+@import "./blocks/header.scss";
+@import "./blocks/cards.scss";
+@import "./blocks/about.scss";
+@import "./blocks/welcome-area.scss";
+@import "./blocks/features.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/direction.scss";
+@import "./blocks/gallery.scss";
+@import "./blocks/partners.scss";
+@import "./blocks/form.scss";
+
+html,
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 1220px;
+
+    @media (max-width: $mobile-width) {
+        max-width: 320px;
+        overflow: hidden;
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+  
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+  
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.section-title {
+    font-size: 32px;
+    justify-content: center;
+    margin: 40px auto;
+    padding: 24px 0;
+    
+    @media (max-width: $mobile-width) {
+        text-align: center;
+    }
+}
+
+.swiper {
+    width: 100%;
+    height: 700px;
+
+    @media (max-width: 1219px) {
+        width: 1260px;
+    }
+
+    @media (max-width: $mobile-width) {
+        width: 100%;
+    }
+
+    &-button-next::after,
+    &-button-prev::after {
+        color: $white;
+    }
+}
+ 
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}

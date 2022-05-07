@@ -1,0 +1,127 @@
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, min-content);
+    
+    @media (max-width: $mobile-width) {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 320px;
+    }
+
+    &__title {
+        font-size: 32px;
+        justify-content: center;
+        margin: 48px auto 10px auto;
+        padding: 24px 0;
+        grid-row: 1 / 2;
+        grid-column: 1 / -1;
+    }
+
+    &__subtitle {
+        grid-row: 2 / 3;
+        grid-column: 1 / -1;
+        margin: 20px auto;
+        color: $gray;
+
+        @media (max-width: $mobile-width) {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    }
+
+    &__logo {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+        margin: 0 auto;
+        align-self: flex-start;
+        margin-top: 35px;
+        width: 300px;
+
+        @media (max-width: $mobile-width) {
+            display: none;
+        }
+    }
+
+    &__list {
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        list-style: none;
+        padding: 0;
+        row-gap: 20px;
+
+        @media (max-width: $mobile-width) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 320px;
+            row-gap: 10px;
+        }
+    }
+
+    &__item {
+        display: block;
+        width: fit-content;
+        position: relative;
+        margin-bottom: 50px;
+        text-align: center;
+
+        @media (max-width: $mobile-width) {
+            text-align: center;
+            width: 320px;
+            margin-bottom: 20px;
+        }
+
+        &:first-child {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+
+        &:nth-child(2) {
+            grid-column: 1 / 2;
+            grid-row: 2/ 3;
+        }
+
+        &:nth-child(3) {
+            grid-column: 3 / 4;
+            grid-row: 1 / 2;
+        }
+
+        &:nth-child(4) {
+            grid-column: 3 / 4;
+            grid-row:  2 / 3;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            left: 45%;
+            top: -20px;
+            background-image: url(/src/images/icons/icon-1.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            // @media (max-width: $mobile-width) {
+            //     top: -20px;
+            //     left: auto;
+            // }
+        }  
+    }
+
+    &__text {
+        color: $gray;
+        font-size: 14px;
+
+        @media (max-width: $mobile-width) {
+            font-size: 12px;
+        }
+    }
+}
